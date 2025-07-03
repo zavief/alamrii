@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport News 2 - Kiss Sport News</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Menyertakan file CSS -->
+</head>
+<body>
+    <!-- Navbar atau Kategori -->
+    <div class="navbar">
+        <ul>
+            <li><a href="beranda_SportNews.html">Sport News</a></li>
+            <li><a href="beranda_SejarahOlahraga.html">Sejarah Olahraga</a></li>
+            <li><a href="isi_JadwalPertandinganBola.html">Jadwal Pertandingan Bola</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <!-- Gambar Header untuk Sport News 2 -->
+        <div class="news-header">
+            <img src="download (1).jpeg" alt="Sport News 2" class="news-image">
+        </div>
+
+        <!-- Deskripsi Berita Sport News 2 -->
+        <div class="news-content">
+            <h2>Recap AUSTRALIAN GP 2025</h2>
+            <p>
+                Jakarta - Pebalap McLaren Lando Norris tampil sebagai juara seri pembuka F1 GP Australia 2025. Norris mengalahkan Max Verstappen (Red Bull Racing).
+
+Balapan yang berlangsung di Sirkuit Albert Park, Melbourne, Minggu (16/3/2025) siang WIB, berlangsung penuh drama. Hujan sempat mengguyur lintasan.</p>
+            <img src="f1 2.webp" alt="">
+            <p>
+               Safety car sempat keluar tiga kali di sepanjang balapan. Norris sendiri mampu bertahan dari tekanan Verstappen untuk finis pertama.
+            </p>
+            <p>
+               Pebalap Mercedes George Russell melengkapi podium dengan finis ketiga di belakang Verstappen.
+            </p>
+            
+            <p>Sementara itu, hasil mengecewakan diraih oleh Lewis Hamilton yang kini membela Ferrari. Debutnya dalam balapan bersama Tim Kuda Jingkrak berakhir di posisi ke-10. Sementara rekan setimnya, Charles Leclerc, finis di urutan kedelapan.</p>
+            
+            <h2>Hasil AUSTRALIAN GP 2025</h2>
+            <img src="hasilf1.JPG" alt="">
+            <p>Dari total 20 pebalap yang mengikuti balapan GP Australia 2025, hanya 14 yang berhasil finis. Enam pebalap lainnya gagal finis, termasuk Fernando Alonso dan Carlos Sainz.</p>
+        </div>
+       <main>
+  <div>
+    <section class="comments-section">
+      <h3>Berikan Pendapat Anda</h3>
+      <form id="comment-form">
+        <label for="name">Nama:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Masukkan nama Anda"
+        />
+
+        <label for="comment">Komentar:</label>
+        <textarea
+          id="comment"
+          name="comment"
+          required
+          placeholder="Tulis komentar Anda di sini"
+        ></textarea>
+
+        <button type="submit">Kirim Komentar</button>
+      </form>
+
+      <div id="comments-display">
+        <!-- Komentar yang dikirim akan ditampilkan di sini -->
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+  // Tangani pengiriman form
+  document.getElementById('comment-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Mencegah halaman reload saat form disubmit
+
+    // Ambil data nama dan komentar
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+
+    // Cek apakah nama dan komentar tidak kosong
+    if (name && comment) {
+      // Buat elemen baru untuk komentar
+      const commentElement = document.createElement('div');
+      commentElement.classList.add('comment');
+      
+      // Masukkan nama dan komentar ke dalam elemen
+      commentElement.innerHTML = `<strong>${name}</strong>: <p>${comment}</p>`;
+
+      // Tampilkan komentar di bagian display
+      document.getElementById('comments-display').appendChild(commentElement);
+
+      // Kosongkan form setelah komentar dikirim
+      document.getElementById('comment-form').reset();
+    } else {
+      alert('Nama dan komentar harus diisi!');
+    }
+  });
+</script>
+
+    </div>
+
+    <script src="script.js"></script> <!-- Menyertakan file JavaScript -->
+</body>
+</html>

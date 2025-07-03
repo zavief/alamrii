@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiss Sport News - Beranda</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Menyertakan file CSS -->
+</head>
+<body>
+    <!-- Navbar atau Kategori -->
+    <div class="navbar">
+        <ul>
+            <li><a href="beranda_SportNews.html">Sport News</a></li>
+            <li><a href="beranda_SejarahOlahraga.html">Sejarah Olahraga</a></li>
+            <li><a href="isi_JadwalPertandinganBola.html">Jadwal Pertandingan Bola</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <!-- Gambar Header -->
+        <div class="header">
+            <img src="logokiss.png" alt="Kiss Sport News" class="header-img" height="30px" width="40">
+        </div>
+
+        <!-- Kategori Section -->
+        <div class="category-section">
+            <div  class="category" id="sportNews" >
+                <h2>Sport News</h2>
+                <p>Berita terkini seputar dunia olahraga!</p>
+            </div>
+            <div class="category" id="sejarahOlahraga">
+                <h2>Sejarah Olahraga</h2>
+                <p>Menelusuri sejarah olahraga dari masa ke masa.</p>
+            </div>
+            <div class="category" id="jadwalPertandingan">
+                <h2>Jadwal Pertandingan Bola</h2>
+                <p>Cek jadwal pertandingan bola di berbagai liga dunia.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>document.getElementById("sportNews").addEventListener("click", function () {
+    window.location.href = "beranda_SportNews.html";
+});
+
+document.getElementById("sejarahOlahraga").addEventListener("click", function () {
+    window.location.href = "beranda_SejarahOlahraga.html";
+});
+
+document.getElementById("jadwalPertandingan").addEventListener("click", function () {
+    window.location.href = "isi_JadwalPertandinganBola.html";
+});
+</script> <!-- Menyertakan file JavaScript -->
+</body>
+</html>
