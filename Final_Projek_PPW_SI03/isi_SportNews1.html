@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport News 1 - Kiss Sport News</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Menyertakan file CSS -->
+</head>
+<body>
+    <!-- Navbar atau Kategori -->
+    <div class="navbar">
+        <ul>
+            <li><a href="beranda_SportNews.html">Sport News</a></li>
+            <li><a href="beranda_SejarahOlahraga.html">Sejarah Olahraga</a></li>
+            <li><a href="isi_JadwalPertandinganBola.html">Jadwal Pertandingan Bola</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <!-- Gambar Header untuk Sport News 1 -->
+        <div class="news-header">
+            <img src="download (2).jpeg" alt="Sport News 1" class="news-image">
+        </div>
+
+        <!-- Deskripsi Berita Sport News 1 -->
+        <div class="news-content">
+            <h2>Perempat Final Piala Dunia Antar Club FIFA: Tumbangnya 2 Raksasa Eropa</h2>
+            <p>
+                Amerika Serikat - Piala Dunia Antarklub 2025 berikan kejutan. Dua raksasa Liga Champions yakni Manchester City dan Inter Milan, tumbang di awal fase gugur!
+            </p>
+
+            <p>
+                Piala Dunia Antarklub 2025 jalani babak 16 besar. Kejutan demi kejutan terjadi pada Senin (1/7).</p>
+
+            <img src="inter.jpeg" alt=""> 
+
+            <p>Inter Milan, yang notabenenya dua kali jadi finalis Liga Champions dalam empat musim terakhir harus angkat koper. Si Ular takluk dari Fluminense 0-2.
+
+Wakil asal Brasil itu sanggup buat Inter mati kutu. Meski Inter bisa mendominasi penguasaan bola, Thiago Silva dkk lebih efektif dalam menuntaskan peluang.
+            </p>
+            <img src="mancity.jpeg" alt="">
+            <p>Manchester City, juara Liga Champions di tahun 2023 juga harus angkat koper di babak 16 besar Piala Dunia Antarklub 2025. Bermain sampai babak perpanjangan waktu, The Citizens takluk dari Al Hilal!
+
+Wakil Arab Saudi itu berikan perlawanan ketat. Skor sama kuat 2-2 di waktu normal, pasukannya Simone Inzaghi menang 4-3 setelahnya.</p>
+
+            <p>Masih ada raksasa Liga Champions lainnya yang amankan tempat di peramptfinal. Ada Chelsea, PSG dan Bayern yang keduanya akan berduel, serta Real Madrid vs Juventus akan main pada Rabu (2/7) dini hari WIB serta Dortmund hadapi Monterrey di pagi harinya.</p>
+        </div>
+        <main>
+  <div>
+    <section class="comments-section">
+      <h3>Berikan Pendapat Anda</h3>
+      <form id="comment-form">
+        <label for="name">Nama:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Masukkan nama Anda"
+        />
+
+        <label for="comment">Komentar:</label>
+        <textarea
+          id="comment"
+          name="comment"
+          required
+          placeholder="Tulis komentar Anda di sini"
+        ></textarea>
+
+        <button type="submit">Kirim Komentar</button>
+      </form>
+
+      <div id="comments-display">
+        <!-- Komentar yang dikirim akan ditampilkan di sini -->
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+  // Tangani pengiriman form
+  document.getElementById('comment-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Mencegah halaman reload saat form disubmit
+
+    // Ambil data nama dan komentar
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+
+    // Cek apakah nama dan komentar tidak kosong
+    if (name && comment) {
+      // Buat elemen baru untuk komentar
+      const commentElement = document.createElement('div');
+      commentElement.classList.add('comment');
+      
+      // Masukkan nama dan komentar ke dalam elemen
+      commentElement.innerHTML = `<strong>${name}</strong>: <p>${comment}</p>`;
+
+      // Tampilkan komentar di bagian display
+      document.getElementById('comments-display').appendChild(commentElement);
+
+      // Kosongkan form setelah komentar dikirim
+      document.getElementById('comment-form').reset();
+    } else {
+      alert('Nama dan komentar harus diisi!');
+    }
+  });
+</script>
+
+    </div>
+    
+
+    <script src="script.js"></script> <!-- Menyertakan file JavaScript -->
+</body>
+</html>
